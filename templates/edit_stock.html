@@ -1,0 +1,27 @@
+{% extends "base.html"%}
+
+{% block title %} Add New Sales Order {% endblock %}
+
+{% block content %}
+
+<form method="POST" action="#">
+    <table>
+        <label for="code">Choose an item:</label>
+        {%for item in stock_info%}
+        <tr>
+            <td>{{item[1]}}</td>
+            <td><input type="number" name="{{item[1]}}" required value={{item[2]}}></td>
+            <td>{{item[3]}}</td>
+        </tr>
+        {%endfor%}
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Submit"><input type="reset" value="Clear"></td>
+            <td></td>
+
+        </tr>
+    </table>
+
+</form>
+
+{% endblock %}

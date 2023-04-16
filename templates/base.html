@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{%block title%} {%endblock%}</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<header>
+		<h1>Database Operations</h1>
+		<nav>
+			<ul>
+				<li><a href="/">Purchasing Advices</a></li>
+				<li><a href="/sales_orders">Sales Orders</a></li>
+				<li><a href="/stock">Stock</a></li>
+				<li><a href="/new_sales_order">Add New Sales Order</a></li>
+				<li><a href="/edit_sales_order">Edit Sales Order</a></li>
+				<li><a href="/edit_stock">Edit Stock</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+        {%block content%}{%endblock%}
+	</main>
+	<footer>
+		<p>&copy; 2023 Flask Task</p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{% extends "base.html"%}
+
+{% block title %} Stock {% endblock %}
+
+{% block content %}
+
+    <table border="1">
+        <!-- <caption></caption> -->
+        <thead>
+            <tr>
+                <th>Code</th >
+                <th>Quantity</th>
+                <th>Unit</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for data in datas%}
+            <tr>
+                <td>{{data[1]}}</td>
+                <td>{{data[2]}}</td>
+                <td>{{data[3]}}</td>
+            </tr>
+            {% endfor %} 
+        </tbody>
+    </table>
+
+{% endblock %}
